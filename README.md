@@ -1,123 +1,44 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+1️⃣ What is the difference between var, let, and const?
+=> var is function scope. it can be redeclare and ressign, where let and const are block scope
+=> let is block scope. it can't redclare but can be ressign.
+=> const is also block scope. but it can't be redclare or ressign. object properties can be changed, but the variable cannot be reassigned.
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+2️⃣ What is the spread operator (...)?
+=>The spread operator (...) is used to expand or copy elements of an array or object into another array or object.
+const arr1 = [10, 20, 30]
+const arr2 = [40, 50, 60]
 
----
-
-# Assignment-05: GitHub Issues Tracker
-
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+const res = [...arr1, ...arr2]
+console.log("res")
+output will be = [10, 20, 30, 40, 50, 60]
 
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+3️⃣ What is the difference between map(), filter(), and forEach()?
+=>map() transfrom each elements and returns a new array
+    const ward = ["java", "javascript", "python", "MySql"]
+    const result = ward.map(word => word.length);
+    console.log(result);
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
+=>filter()returns elements that match a condition
+    const numbers = [1,2,3,4,5];
+    const result = numbers.filter(num => num > 3);
+    console.log(result);
 
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
-
-
---- 
-
-
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
-
-
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
-
-
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
-
-
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+=>forEach() → only loops through the array, does not return anything.
+    numbers.forEach(function(num) {
+    console.log(num)})
 
 
 
+4️⃣ What is an arrow function?
+Arrow function in JavaScript is a shorter syntax to write functions using =>
+const square = x => x * x;
+console.log(square(4));
+
+
+5️⃣ What are template literals?
+=>Template literals are strings wrapped in backticks that allow variable/ expression interpolation and multi-line strings.
+    const mes = `This is line 1 
+    This is line 2`;
+    console.log(mes);
 
