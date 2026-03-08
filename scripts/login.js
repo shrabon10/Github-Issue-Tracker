@@ -6,11 +6,10 @@ signInbtn.addEventListener("click", ()=>{
     
 
     if(userName === "admin" && passward === "admin123"){
-        // alert("sucessfully login") 
-        window.location.assign("index.html")
+        window.location.assign("home.html")
         return;
     }else{
-        alert("Worng Passward")
+        alert("Invalid Passward")
         return;
     }
 })
